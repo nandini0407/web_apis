@@ -25,7 +25,6 @@ export const codeAddress = function() {
         map: map,
         animation: google.maps.Animation.DROP,
         position: results[0].geometry.location,
-        draggable: true
       });
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
