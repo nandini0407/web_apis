@@ -1,5 +1,6 @@
 var geocoder;
 var map;
+var marker;
 
 export const initialize = function() {
   geocoder = new google.maps.Geocoder();
@@ -13,12 +14,18 @@ export const initialize = function() {
 
 export const codeAddress = function() {
   var address = document.getElementById('address').value;
+  // removes the previous marker and sets a new one
+  if (marker) {
+    marker.setMap(null);
+  }
   geocoder.geocode( { 'address': address }, function(results, status) {
     if (status == 'OK') {
       map.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-          map: map,
-          position: results[0].geometry.location
+      marker = new google.maps.Marker({
+        map: map,
+        animation: google.maps.Animation.DROP,
+        position: results[0].geometry.location,
+        draggable: true
       });
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
