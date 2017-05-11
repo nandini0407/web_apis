@@ -3,23 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Simple Map</title>
-    <style>
-      #map {
-        width: 100%;
-        height: 400px;
-        background-color: grey;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8q9d-NyRvp5X_yYf09KQ0-y1X9bQcHvc&">
     </script>
   </head>
   <body>
-    <div>
+    <div class="search">
       <input type="text" id="address" value="Sydney">
       <input type="button" id="encode" value="Encode">
     </div>
-    <div id="map"></div>
+    <div class="box">
+      <div id="map"></div>
+    </div>
     <script type="text/javascript" src="bundle.js"></script>
   </body>
 </html>
