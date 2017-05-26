@@ -5,7 +5,7 @@ import { getWeather } from './weather_actions';
 
 const mapStateToProps = (state) => {
   return {
-    weather: state.weather
+    weather: state
   };
 };
 

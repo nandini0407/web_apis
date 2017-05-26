@@ -4,7 +4,7 @@ var marker;
 
 export const initialize = function() {
   geocoder = new google.maps.Geocoder();
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var latlng = new google.maps.LatLng(12.35275, 121.067612);
   var mapOptions = {
     zoom: 4,
     center: latlng
