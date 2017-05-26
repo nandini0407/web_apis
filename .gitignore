@@ -2,3 +2,5 @@ simple_google_map/node_modules/
 node_modules/
 bundle.js
 bundle.js.map
+weather_app/node_modules/
+weather_app/city.list.json
