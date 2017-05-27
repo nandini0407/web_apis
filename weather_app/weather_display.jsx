@@ -70,44 +70,59 @@ class WeatherDisplay extends React.Component {
       let sunrise = this.toTime(w.sys.sunrise);
       let sunset = this.toTime(w.sys.sunset);
       weatherSection = (
-        <div>
-          <h3>Displaying weather for { w.name }, { w.sys.country }</h3>
-          <h4>{ w.weather[0].main }</h4>
-          <p>{ w.weather[0].description }</p>
-          <h4>Temperature : { tempNow }</h4>
-          <h4>Minimum Temperature : { tempMin }</h4>
-          <h4>Maximum Temperature : { tempMax }</h4>
-          <h4>Pressure : { w.main.pressure }</h4>
-          <h4>Humidity : { w.main.humidity }%</h4>
-          <h4>Visibility : { w.visibility }</h4>
-          <h4>Wind : <p>Speed : { w.wind.speed }</p> <p>Deg : { w.wind.deg }</p></h4>
-          <h4>Sunrise : { sunrise }</h4>
-          <h4>Sunset : { sunset }</h4>
+        <div className="weather-display">
+          <div className="weather-title">
+            <h3 className="title">Displaying weather for { w.name }, { w.sys.country }</h3>
+            <h4 className="caption">{ w.weather[0].main }</h4>
+            <p className="desc">{ w.weather[0].description }</p>
+          </div>
+          <div className="temperature">
+            <h4>Temperature : { tempNow }</h4>
+            <div className="min-max-temp">
+              <h4>Low : { tempMin }</h4>
+              <h4>High : { tempMax }</h4>
+            </div>
+          </div>
+          <div className="misc">
+            <div className="pressure">
+              <h4>Pressure : { w.main.pressure }</h4>
+              <h4>Humidity : { w.main.humidity }%</h4>
+              <h4>Visibility : { w.visibility }</h4>
+              <h4>Wind : <p>Speed : { w.wind.speed }</p> <p>Deg : { w.wind.deg }</p></h4>
+            </div>
+            <div className="sun">
+              <h4>Sunrise : { sunrise }</h4>
+              <h4>Sunset : { sunset }</h4>
+            </div>
+          </div>
         </div>);
     } else {
       weatherSection = (<div></div>);
     }
     return (
-      <div>
-        <form onSubmit={ this.handleSubmit }>
+      <div className="weather">
+        <form className="form" onSubmit={ this.handleSubmit }>
           <input
             type="text"
             value={ this.state.inputCity }
             placeholder="City"
             onChange={ this.update('inputCity') }
+            className="city-box"
             />
           <input
             type="text"
             value={ this.state.inputCountry}
             placeholder="Country (eg, PH for Philippines)"
             onChange={ this.update('inputCountry') }
+            className="country-box"
             />
           <input
             type="submit"
             value="Get Weather"
+            className="submit-button"
             />
         </form>
-        <div>
+        <div className="main-display">
           { weatherSection }
         </div>
       </div>

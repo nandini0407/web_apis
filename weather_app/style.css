@@ -1,0 +1,134 @@
+body {
+  margin: 0 auto;
+  font-family: 'Cabin', sans-serif;
+  color: #6e9094;
+}
+
+#root {
+  margin: 60px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-box {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #40a1b7;
+  color: #40a1b7;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.country-box {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #40a1b7;
+  color: #40a1b7;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.submit-button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #40a1b7;
+  border-radius: 4px;
+  background-color: #64c1d0;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.main-display {
+  width: 100%;
+  display: flex;
+}
+
+.weather-display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-title {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid 1px solid rgba(106, 192, 212, 0.75);
+  border-radius: 6px;
+  background-color: rgba(100, 193, 208, 0.53);
+  padding: 15px;
+}
+
+h3, h4, p {
+  margin: 2px;
+}
+
+.temperature {
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid 1px solid rgba(106, 192, 212, 0.75);
+  border-radius: 6px;
+  background-color: rgba(100, 193, 208, 0.53);
+  padding: 15px;
+}
+
+.min-max-temp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.misc {
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pressure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid 1px solid rgba(106, 192, 212, 0.75);
+  border-radius: 6px;
+  background-color: rgba(100, 193, 208, 0.53);
+  padding: 15px;
+}
+
+.sun {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid 1px solid rgba(106, 192, 212, 0.75);
+  border-radius: 6px;
+  background-color: rgba(100, 193, 208, 0.53);
+  padding: 15px;
+}
